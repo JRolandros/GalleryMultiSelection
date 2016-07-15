@@ -17,6 +17,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GalleryMultiSelection", "Ga
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		GalleryMultiSelection\GalleryMultiSelection\GalleryMultiSelection.projitems*{8dbcd0c6-ef4a-4bd6-9929-b6c9c3b27400}*SharedItemsImports = 4
+		GalleryMultiSelection\GalleryMultiSelection\GalleryMultiSelection.projitems*{26cd68d4-0b3d-4640-ae75-c5977674baf2}*SharedItemsImports = 4
+		GalleryMultiSelection\GalleryMultiSelection\GalleryMultiSelection.projitems*{066ca85c-b5b5-4a28-bfa2-9680ff1d48b4}*SharedItemsImports = 4
+		GalleryMultiSelection\GalleryMultiSelection\GalleryMultiSelection.projitems*{42746027-7bb8-48c6-bc32-0ef3ee9df76c}*SharedItemsImports = 4
+		GalleryMultiSelection\GalleryMultiSelection\GalleryMultiSelection.projitems*{1f5bb000-8669-4fb7-bb38-fbb34d7024d5}*SharedItemsImports = 4
 		GalleryMultiSelection\GalleryMultiSelection\GalleryMultiSelection.projitems*{4bb8686b-da3b-43e8-b146-e0a4b77c862e}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

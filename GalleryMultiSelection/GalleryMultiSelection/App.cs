@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalleryMultiSelection.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,17 +10,39 @@ namespace GalleryMultiSelection
 {
 	public class App : Application
 	{
-		public App ()
+        private IGalleryService galleryServ = DependencyService.Get<IGalleryService>();
+        Image img;
+        Button btn = new Button();
+        public App ()
 		{
-			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
+            btn.Clicked += (s, o) =>
+            {
+                galleryServ.OpenGallery();
+            };
+            
+
+            
+            
+            btn.Text = "Choose photos";
+
+            img = new Image();
+            img.Source = "facebook.jpg";
+            MessagingCenter.Subscribe<IGestureListner, List<System.IO.Stream>>(this, "PostProject", (sender, args) =>
+            {
+                img.Source =ImageSource.FromStream(()=>args.ElementAt(0)) ;
+            });
+        // The root page of your application
+        MainPage = new ContentPage {
+                Content = new StackLayout {
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    Orientation=StackOrientation.Vertical,
+                    Children = {
+                        new Label {
+                            XAlign = TextAlignment.Center,
+                            Text = "Welcome to Xamarin Forms!"
+                        },
+                        btn,
+                        img,
 					}
 				}
 			};
